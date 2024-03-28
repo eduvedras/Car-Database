@@ -4,7 +4,7 @@ from os import path
 
 SQLALCHEMY_DATABASE_URI = "mysql+mysqlconnector://{username}:{password}@{hostname}/{databasename}".format(
     username="eduvedras",
-    password="hjshjhdjah kjshkjdhjs",
+    password="password",
     hostname="eduvedras.mysql.pythonanywhere-services.com",
     databasename="eduvedras$database1",
 )
