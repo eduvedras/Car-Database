@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+  %}
+<div style=" display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+      gap: 10%;" class="button-container">
+  <button style = "font-size: 25px;"onclick = "window.location.href='/adicionarcarro';" class="btn btn-primary">Adicionar Carro</button>
+  <button style = "font-size: 25px;" onclick = "window.location.href='/pesquisar';" class="btn btn-primary">Pesquisar Preços</button>
+  <button style = "font-size: 25px;" onclick = "window.location.href='/removercarro';" class="btn btn-primary">Remover Carro</button>
+</div>
+
+{% endblock %}

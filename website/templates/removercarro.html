@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+    %}
+  <h1 align="center">Clica na cruz para remover um carro</h1>
+
+    <ul class="list-group list-group-flush" id="cars">
+    {% for car in result %}
+    <li class="list-group-item">
+        Marca: {{ car.brand }} - Modelo: {{ car.model }} - Ano: {{ car.year }} - Preço: {{ car.price }}
+        <button type="button" class="close" onClick="deleteCar({{ car.id }})">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </li>
+    {% endfor %}
+    </ul>
+  {% endblock %}

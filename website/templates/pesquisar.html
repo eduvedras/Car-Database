@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+    %}
+  <h1 align="center">Coloca os filtros</h1>
+  
+  <form method="POST">
+    <h3>Marca: </h3>
+    <input type="text" name="marca" id="marca" class="form-control" />
+    <br />
+    <h3>Modelo: </h3>
+    <input type="text" name="modelo" id="modelo" class="form-control" />
+    <br />
+    <h3>Ano: </h3>
+    <input type="text" name="ano" id="ano" class="form-control" />
+    <br />
+    <div align="center">
+      <button type="submit" class="btn btn-primary">Pesquisar</button>
+    </div>
+    <h1 align="center">Resultado da pesquisa</h1>
+    <div class="container">
+      <h5 align="left">Média de preços: {{ average }}</h3>
+      <h5 align="left">Maior preço: {{ max_val }}</h3>
+      <h5 align="left">Menor preço: {{ min_val }}</h3>
+    </div>
+    <ul class="list-group list-group-flush" id="cars">
+    {% for car in result %}
+    <li class="list-group-item">
+        Marca: {{ car.brand }} - Modelo: {{ car.model }} - Ano: {{ car.year }} - Preço: {{ car.price }}
+    </li>
+    {% endfor %}
+    </ul>
+  {% endblock %}

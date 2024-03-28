@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+    %}
+  <h1 align="center">Adiciona um carro</h1>
+  
+  <form method="POST">
+    <h3>Marca: </h3>
+    <input type="text" name="marca" id="marca" class="form-control" />
+    <br />
+    <h3>Modelo: </h3>
+    <input type="text" name="modelo" id="modelo" class="form-control" />
+    <br />
+    <h3>Ano: </h3>
+    <input type="text" name="ano" id="ano" class="form-control" />
+    <br />
+    <h3>Preço: </h3>
+    <input type="text" name="preco" id="preco" class="form-control" />
+    <br />
+    <div align="center">
+      <button type="submit" class="btn btn-primary">Adicionar</button>
+    </div>
+  
+  {% endblock %}
